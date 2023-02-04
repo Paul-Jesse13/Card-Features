@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: radial-gradient(#fff,#ffd6d6);
+    zoom: 125%;
+}
+/* ::selection{
+    background-color: #000;
+    color: #fff;
+} */
+#pricing{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0px 30px;
+    margin-top: 80px;
+}
+.card{
+    flex-basis: calc(100% / 4);
+    padding: 13px;
+}
+.card .default{
+    background: #fff;
+    height: 100%;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+.card .default:hover{
+    transform: translateY(-15px);
+}
+.card h3{
+    text-align: center;
+    font-weight: 450;
+}
+.card h1{
+    margin-top: 15px;
+    margin-bottom: 16px;
+    font-size: 25px;
+}
+.card li{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 10px 0 0;
+    letter-spacing: 1px;
+}
+.card i.fa-sharp{
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #ff523b;
+    font-size: 15px;
+    margin-right: 10px;
+}
+.card span{
+    font-size: 11px;
+    font-weight: 540;
+}
+.btn{
+    height: 40px;
+    width: 70%;
+    background: #ff523b;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-weight: 600px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0px 10px rgba(156, 19, 19, 0.7);
+    transition: 0.4s;
+}
+.btn:hover{
+    background: #772222;
+    box-shadow: 0 0 10px #772222;
+}
+.card .most-bought{
+    position: relative;
+}
+.card .most-bought::before{
+    content: 'Recomended';
+    position: absolute;
+    top: 25px;
+    font-size: 11px;
+    color: #fff;
+    font-weight: 400;
+    left: -60px;
+    background: yellowgreen;
+    transform: rotate(-45deg);
+    padding: 0 60px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.most-bought.default{
+    background: #ff523b;
+    color: #fff;
+    overflow: hidden;
+}
+.most-bought.default i.fa-sharp{
+    color: #fff;
+    background-color: #ff523b;
+}
+.most-bought.default .btn{
+    background: orange;
+    color: #fff;
+    transition: 0.5s;
+}
+.most-bought.default .btn:hover{
+    background: greenyellow;
+    color: #fff;
+    box-shadow: 0 3px 15px rgba(185, 150, 9, 0.856);
+}
+.card .best-deal{
+    position: relative;
+}
+.card .best-deal::before{
+    content: 'Most Purchased';
+    position: absolute;
+    top: 25px;
+    font-size: 11px;
+    color: #fff;
+    font-weight: 400;
+    left: -65px;
+    background: #192038;
+    transform: rotate(-45deg);
+    padding: 0 60px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.best-deal.default{
+    background: silver;
+    color: #004c3d;
+    overflow: hidden;
+}
+.best-deal.default .btn{
+    background: #6b991b;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+.best-deal.default .btn:hover{
+    background: #053912;
+    box-shadow: 0 0 10px #053912
+}
+.close span{
+    color: #c4c4c4;
+}
+.close i.fa-sharp{
+    color: white;
+    background-color: #c4c4c4;
+}
+.most-bought.default .close i.fa-sharp{
+    color: #c4c4c4;
+    background: #d64330;
+}
+@media screen and (max-width: 1000px){
+    #pricing{
+        padding: 0px 10px;
+    }
+}
+@media screen and (max-width: 800px){
+    .card{
+        flex-basis: calc(100% / 2);
+        margin-top: 25px;
+    }
+}
+@media screen and (max-width: 600px){
+    .card{
+        flex-basis: calc(100%);
+        margin-top: 25px;
+    }
+    
+}
